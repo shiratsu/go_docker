@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  go_api:
+    container_name: go_api
+    build: docker/go/Dockerfile
+    ports:
+      - 3000:3000
+    tty:
+      true
+    volumes:
+      - ./src/api:/go/src/api:delegated
